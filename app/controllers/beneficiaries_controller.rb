@@ -8,12 +8,12 @@ class BeneficiariesController < ApplicationController
     @beneficiary = Beneficiary.find(params[:id])
   end
 
-  def edit
-    @beneficiary = Beneficiary.find(params[:id])
-  end
+  # def edit
+  #   @beneficiary = Beneficiary.find(params[:id])
+  # end
 
-  def update
-    @beneficiary = Beneficiary.find(params[:id])
-    @beneficiary.update_attributes(params[:beneficiary])
-  end
+  # def update
+  #   @beneficiary = Beneficiary.find(params[:id])
+  #   @beneficiary.update_attributes(params[:beneficiary])
+  # end
 end
