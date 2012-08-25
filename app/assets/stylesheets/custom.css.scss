@@ -1,0 +1,51 @@
+$darkblue: darken(#2795B6, 10%);
+
+#top-nav {
+
+  li {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  a:hover {
+    color: $darkblue;
+  }
+}
+
+.facebook_signin {
+  display: inline-block;
+  margin-bottom: -6px;
+  background: url('/assets/signin_facebook.png') no-repeat;
+  height: 24px;
+  width: 150px;
+  border-bottom: 0px none #fff;
+}
+
+.facebook_signin:hover{
+  background-position: 0 -24px;
+}
+
+.facebook_signin:active{
+  background-position: 0 -48px;
+}
+
+footer {
+  color: gray;
+
+  hr {
+    margin: 22px 0px 10px;
+  }
+
+}
+
+#index-heading {
+  background: url('/assets/asfalt.png');
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    text-align: justify;
+  }
+}

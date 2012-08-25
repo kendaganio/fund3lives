@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="four columns">
+    <img src="http://placehold.it/300x300">
+  </div>
+  <div class="eight columns">
+    <h1><%= @beneficiary.name %></h1>
+    <div class="row collapse">
+      <div class="four columns center">
+        <div class="panel">
+          Amount Needed <br><br>
+          <div class="alert-box alert"><%= @beneficiary.goal%></div>
+        </div>
+      </div>
+      <div class="four columns center">
+        <div class="panel">
+          Amount Funded <br><br>
+          <div class="alert-box success"><%= @beneficiary.current_funds%></div>
+        </div>
+      </div>
+      <div class="four columns center">
+        <div class="panel">
+          Completion <br><br>
+          <div class="alert-box"><%= @beneficiary.current_funds/@beneficiary.goal*100 %> %</div>
+        </div>
+      </div>
+    </div>
+    <p>Help out <%= @beneficiary.name %> through...</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_donations">
+      <input type="hidden" name="business" value="akosiken@gmail.com">
+      <input type="hidden" name="lc" value="US">
+      <input type="hidden" name="item_name" value="Fund3Lives">
+      <input type="hidden" name="no_note" value="0">
+      <input type="hidden" name="currency_code" value="PHP">
+      <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
+    <hr>
+    <p><%= @beneficiary.bio %></p>
+  </div>
+</div>

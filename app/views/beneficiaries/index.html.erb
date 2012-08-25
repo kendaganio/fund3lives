@@ -1,0 +1,12 @@
+<div class="row">
+  <h1 class="center">Our Beneficiaries</h1>
+  <div class="four columns">
+    How does Fund3Lives work?
+
+  </div>
+  <div class="eight columns">
+    <% @beneficiaries.each do |b| %>
+      <%= b.name %>
+    <% end %>
+  </div>
+</div>
