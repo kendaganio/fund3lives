@@ -1,14 +1,14 @@
 <div id="index-heading">
   <br>
-  <h1 class="center">Social Funding</h1>
+  <h1 class="center">Social Funding for sick children.</h1>
   <div class="row">
     <% @featured.each do |f| %>
       <div class="four columns">
         <div class="panel">
-          <img src='http://placehold.it/300x300'><br>
+          <%= image_tag('/assets/uploads/' + f.photo, style: 'width: 300') %><br>
           <h5 class="center"><%= link_to f.name, f %></h5>
-          <p><%= f.bio %></p>
-          <%= link_to "Learn more about #{f.name}...", f %>
+          <p><%= f.bio[0..250] %>...</p>
+          <%= link_to "Learn more about #{f.name}", f %>
         </div>
       </div>
     <% end %>
@@ -16,12 +16,8 @@
 </div>
 <br>
 <div class="row">
-  <h1>Hello</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <h1>What is Fund3Lives?</h1>
+  <p>Fund3lives aims to help 3 different beneficiaries that needs funding through the use of internet. All the donations will be given directly on your chosen beneficiary.
+</p>
 </div>
 
