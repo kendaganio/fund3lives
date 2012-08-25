@@ -1,12 +1,26 @@
 <div class="row">
   <h1 class="center">Our Beneficiaries</h1>
+  <div class="eight columns">
+    <% @beneficiaries.each do |b| %>
+      <div class="panel">
+        <div class="row">
+          <div class="eight columns">
+            <h3><%= link_to b.name, b %></h3>
+            <p>
+              <%= b.bio[0..250] %>..
+              <%= link_to "Help #{b.name} out...", b%>
+            </p>
+          </div>
+          <div class="four columns">
+            <img src="http://placehold.it/300x300">
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <div class="four columns">
     How does Fund3Lives work?
 
   </div>
-  <div class="eight columns">
-    <% @beneficiaries.each do |b| %>
-      <%= b.name %>
-    <% end %>
-  </div>
+
 </div>
